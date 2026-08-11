@@ -36,6 +36,36 @@ This project is intended to support experiment design, data collection, analysis
 - Run statistical analysis for treatment vs. control groups
 - Review the results and document findings
 
+## Whole Pipeline architechture
+
+```
+EXPERIMENT MANAGER
+        │
+        ▼
+"EXP001 is running"
+        │
+        ▼
+ASSIGNMENT ENGINE
+        │
+ ┌──────┴──────┐
+ ▼             ▼
+Control       Treatment
+ │             │
+ └──────┬──────┘
+        ▼
+   EVENT MANAGER
+        │
+        ▼
+   METRICS ENGINE
+        │
+        ▼
+ STATISTICAL ENGINE
+        │
+        ▼
+  DECISION ENGINE
+```
+
+
 ## Development Notes
 
 This repository currently serves as a base scaffold. You can extend it with:
