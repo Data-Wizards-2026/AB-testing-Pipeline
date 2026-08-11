@@ -126,4 +126,6 @@ def main():
 
     exp.run_exp()
 
+    return exp
+
 main()
